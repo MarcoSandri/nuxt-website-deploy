@@ -1,0 +1,19 @@
+$colors : (
+// nome : variabile con codice colore
+	'white' : $white,
+	'black' : $black,
+	'brown-900' : $brown-900,
+	'brown-700' : $brown-700,
+	'brown-500' : $brown-500,
+	'brown-300' : $brown-300,
+);
+
+// bg-color per ogni colore della variabile colors
+@each $name, $color in $colors {
+	.bg-#{$name} {background-color: $color;}
+}
+
+// color per ogni colore della variabile colors
+@each $name, $color in $colors {
+	.c-#{$name} {color: $color;}
+}

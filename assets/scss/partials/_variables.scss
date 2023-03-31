@@ -1,0 +1,34 @@
+$white: #EFEDE9;
+$black: #000000;
+
+$brown-900: #412211;
+$brown-700: #AB6725;
+$brown-500: #F2DCCB;
+$brown-300: #FBF0E7;
+
+$theme-font-base: 18px;
+$font-path: '../fonts/';
+
+/* Fonts */
+
+$font_1: 'Futura PT';
+$font_2: 'NewCaledonia';
+
+
+/* Screen sizes */
+
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);

@@ -1,0 +1,47 @@
+{
+  "header": {
+    "menu" : "menu",
+    "prenota" : "prenota"
+  },
+  "footer": {
+    "dream" : "dream",
+    "events" : "events",
+    "live" : "live",
+    "occasions" : "occasions",
+    "prenota" : "prenota",
+    "borgo38" : "borgo38",
+    "piva" : "P.IVA",
+    "privacy" : "Privacy policy",
+    "cookie" : "Cookie policy",
+    "preferences" : "Preferenze cookie",
+    "credits" : "credits"
+  },
+  "home" : {
+    "borgo38" : "borgo38"
+  },
+  "eventi" : {
+    "eventi" : "eventi"
+  },
+  "news" : {
+    "news" : "news",
+    "eventi" : "Tutti i nostri eventi",
+    "tutte" : "tutte le news",
+    "indietro" : "indietro"
+  },
+  "servizi" : {
+    "posti" : "Posti",
+    "servizi" : "servizi"
+  },
+  "spazi" : {
+    "spazi" : "spazi",
+    "planimetrie" : "Scarica planimetrie",
+    "attrezzature" : "Scarica attrezzature"
+  },
+  "gallery" : {
+    "gallery" : "gallery"
+  },
+  "contatti" : {
+    "dove" : "dove siamo",
+    "prenota" :"prenota"
+  }
+}
