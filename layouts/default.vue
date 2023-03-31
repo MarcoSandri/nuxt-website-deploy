@@ -2,9 +2,9 @@
   <div>
     <AppPreloader />
 
-    <AppHeader />
+    <!-- <AppHeader /> -->
     <slot />
-    <AppFooter />
+    <!-- <AppFooter /> -->
 
     <AppTransition />
   </div>
