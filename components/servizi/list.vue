@@ -24,7 +24,7 @@
                       <nuxt-img class="style-svg" :src="servizio.Icon.data.attributes.url" :alt="servizio.Name" />
                   </div>
                   <div class="servizi-list__image-box">
-                      <nuxt-img :src="servizio.Image.data.attributes.url" :alt="servizio.Name" />
+                      <nuxt-img  format="webp" :src="servizio.Image.data.attributes.url" :alt="servizio.Name" />
                   </div>
               </div>
             </article>
