@@ -1,11 +1,10 @@
 <template>
   <header :class="opened? 'opened' : ''" class="header" ref="header">
-
     <div class="header__overlay"></div>
     <div class="header__wrapper">
       <div :class="opened? 'opened' : ''" class="header__hamburger">
         <div class="header__control t-20 c-brown-900"  @click="headerCheck" > {{ $t('header.menu') }} <div class="header__icon"><nuxt-img src="/svg/plus-icon-brown-700.svg"/></div></div>
-        <!-- <AppMenu class="header__menu" /> -->
+        <AppMenu class="header__menu" />
       </div>
       <NuxtLink :to="localePath('/')" class="header__logo">
         <nuxt-img src="/svg/logo-vertical.svg"/>
