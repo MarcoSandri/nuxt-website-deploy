@@ -9,7 +9,7 @@
 
               <div class="servizi-list__text">
                   <div class="servizi-list__icon servizi-list__icon--landscape">
-                      <nuxt-img class="style-svg" :src="useStrapiMedia(servizio.Icon.data.attributes.url)" :alt="servizio.Name" />
+                      <nuxt-img class="style-svg" :src="servizio.Icon.data.attributes.url" :alt="servizio.Name" />
                     </div>
                     <h2 class="servizi-list__name font_2 t-60 t-regular c-brown-900"> <span class="servizi-list__number font_1 c-brown-700 t-18">0{{index}}</span> {{ servizio.Name }}</h2>
                     <div class="servizi-list__description t-24 t-light c-brown-900" v-html="servizio.Description"></div>
@@ -21,10 +21,10 @@
               </div>
               <div class="servizi-list__image">
                   <div class="servizi-list__icon servizi-list__icon--portrait">
-                      <nuxt-img class="style-svg" :src="useStrapiMedia(servizio.Icon.data.attributes.url)" :alt="servizio.Name" />
+                      <nuxt-img class="style-svg" :src="servizio.Icon.data.attributes.url" :alt="servizio.Name" />
                   </div>
                   <div class="servizi-list__image-box">
-                      <nuxt-img :src="useStrapiMedia(servizio.Image.data.attributes.url)" :alt="servizio.Name" />
+                      <nuxt-img :src="servizio.Image.data.attributes.url" :alt="servizio.Name" />
                   </div>
               </div>
             </article>

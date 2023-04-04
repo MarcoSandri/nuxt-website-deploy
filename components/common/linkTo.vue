@@ -2,7 +2,7 @@
 
   <div class="bg-brown-900 next-page">
     <section class="next-page__wrap">
-        <nuxt-img class="next-page__background" :src="useStrapiMedia(component.Background.data.attributes.url)" :alt="component.Page.data.attributes.Title"/>
+        <nuxt-img class="next-page__background" :src="component.Background.data.attributes.url" :alt="component.Page.data.attributes.Title"/>
         <nuxt-link :to="localePath('/' + component.Page.data.attributes.Slug)" class="fade-in-top next-page__inner">
             <h2 class="next-page__name t-90 font_2 c-brown-500 t-regular" v-html="component.Page.data.attributes.Title"></h2>
             <div class="next-page__arrow"><nuxt-img src="/svg/arrow-right-brown-500.svg" /></div>

@@ -9,7 +9,7 @@
         <div class="home-servizi__lista-inner fade-in-stagger">
           <article v-for="(servizio,index) in component.ServiziList" :key="index" class="home-servizi__servizio fade-in-stagger__element">
             <div class="home-servizi__servizio-icon">
-              <nuxt-img class="style-svg" :src="useStrapiMedia(servizio.Image.data.attributes.url)" :alt="servizio.Label" />
+              <nuxt-img class="style-svg" :src="servizio.Image.data.attributes.url" :alt="servizio.Label" />
             </div>
             <div class="home-servizi__servizio-name">
               <div class="home-servizi__servizio-number font_1 c-brown-700 t-18">0{{ index }}</div>
