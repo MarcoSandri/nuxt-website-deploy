@@ -33,7 +33,6 @@ import { Loader } from "@googlemaps/js-api-loader"
 const { find } = useStrapi4();
 const config = useRuntimeConfig()
 
-console.log(config.gmapsApiKey);
 defineProps({
   component : Object
 })

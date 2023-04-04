@@ -24,8 +24,6 @@
     })
   );
 
-  console.log(error)
-
   const components = data.value.data.attributes.HomePage.data.attributes.Content || {}
   const localizations = data.value.data.attributes.HomePage.data.attributes.localizations.data || {}
 
