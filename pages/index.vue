@@ -41,28 +41,28 @@
   }
 
 
-  definePageMeta({
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in',
-    onEnter: (el, done) => {
-      const transition = useTransition();
-      transition.value = 'onEnter'
+//   definePageMeta({
+//   pageTransition: {
+//     name: 'page',
+//     mode: 'out-in',
+//     onEnter: (el, done) => {
+//       const transition = useTransition();
+//       transition.value = 'onEnter'
       
-      setTimeout(() => {
-        done()
-      }, 500);
-    },
-    onLeave(el, done) {
-      const transition = useTransition();
-      transition.value = 'onLeave'
+//       setTimeout(() => {
+//         done()
+//       }, 500);
+//     },
+//     onLeave(el, done) {
+//       const transition = useTransition();
+//       transition.value = 'onLeave'
 
-      setTimeout(() => {
-        done()
-      }, 500);
-    }
-  }
-})
+//       setTimeout(() => {
+//         done()
+//       }, 500);
+//     }
+//   }
+// })
 </script>
   
 <style scoped lang="scss">
