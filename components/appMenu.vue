@@ -11,16 +11,16 @@
       </div>
       <div class="menu__info">
         <div class="menu__info-box">
-          <p class="t-20 c-brown-900 t-light">{{ data.data.attributes.Street }}</p>
-          <p class="t-20 c-brown-900 t-light">{{ data.data.attributes.City }} ( {{ data.data.attributes.Region }} )</p>
-          <p class="t-20 c-brown-900 t-light">M <a target="_blank" :href="'mailto:'+data.data.attributes.Email">{{ data.data.attributes.Email }} </a></p>
+          <p class="t-20 c-brown-900 t-light">{{ general.data.attributes.Street }}</p>
+          <p class="t-20 c-brown-900 t-light">{{ general.data.attributes.City }} ( {{ general.data.attributes.Region }} )</p>
+          <p class="t-20 c-brown-900 t-light">M <a target="_blank" :href="'mailto:'+general.data.attributes.Email">{{ general.data.attributes.Email }} </a></p>
         </div>
         <div class="menu__info-box">
           <AppSocial />
         </div>
       </div>
       <div class="menu__contacts">
-        <a :href="'tel:+39'+data.data.attributes.Telephone.replace(' ', '')" class="button button--big button--icon-left"><div class="button__icon"><nuxt-img src="/svg/phone-icon.svg"/></div>{{ data.data.attributes.Telephone }}</a>
+        <a :href="'tel:+39'+general.data.attributes.Telephone.replace(' ', '')" class="button button--big button--icon-left"><div class="button__icon"><nuxt-img src="/svg/phone-icon.svg"/></div>{{ general.data.attributes.Telephone }}</a>
         <NuxtLink :to="localePath('/contatti')" class="go-to-link button button--big button--icon-right menu__book">{{ $t('header.prenota') }}<div class="button__icon"><nuxt-img src="/svg/arrow-right.svg"/></div></NuxtLink>
       </div>
     </div>
@@ -33,19 +33,23 @@ const { find, findOne } = useStrapi4();
 const localePath = useLocalePath();
 let opened = menuOpened()
 
-const { data, pending, refresh, error } = await useAsyncData("general", () =>
+const { data : general, pending: generalPending, refresh: generalRefresh, error: generalError } = await useAsyncData("general", () =>
 find("general", {
     populate: "deep",
   })
 );
 
-const menu = await useAsyncData("menus", () =>
+const { data : menu, pending: menuPending, refresh: menuRefresh, error: menuError } = await useAsyncData("menus", () =>
 findOne("menus", 1, {
     populate: ["*", "items.page_relation"],
   })
 );
 
+console.log(general.value);
+console.log(menu.value);
+
 const menuItems = menu.data.value.data.attributes.items.data
+
 </script>
 
 <style lang="scss" scoped>

@@ -26,7 +26,7 @@
 
       <div class="home-hero__slider fader" ref="container">
         <div class="home-hero__slide fader__slide" v-for="(image, index) in component.HeroImageGallery.data" :key="index" :style="{ opacity: opacities[index] }">
-          <nuxt-img format="webp" :src="useStrapiMedia(image.attributes.url)" :alt="image.attributes.alternativeText" />
+          <nuxt-img format="webp" :src="image.attributes.url" :alt="image.attributes.alternativeText" />
         </div>
       </div>
       
