@@ -51,6 +51,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/partials/titles';
 .header {
   $header : &;
   position: fixed;

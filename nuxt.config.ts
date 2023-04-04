@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   // * Nuxt image configuration
   image: {
     // * Domain is mandatory to modify external images
-    domains: [process.env.BACKEND_DOMAIN]
+    domains: ['res.cloudinary.com']
   },
   // * i18n configuration
   i18n: {
@@ -63,12 +63,16 @@ export default defineNuxtConfig({
     cookie: {},
     cookieName: 'strapi_jwt',
   },
-  css: ['@/assets/scss/resetscss.scss'],
+  css: [
+    // '@/assets/scss/resetscss.scss',
+    '@/assets/scss/main.scss'
+  ],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "@/assets/scss/main.scss";`,
+          additionalData:
+            `@import "@/assets/scss/variables.scss";`,
         }
       }
     }

@@ -40,7 +40,7 @@
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   main {
     padding-top: rvh(170);
   }

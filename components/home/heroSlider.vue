@@ -71,8 +71,6 @@
     [])
 
     onMounted(() => {
-      // console.log(slider.value)
-      console.log('aa')
       slider.value.update()
     })
 
@@ -81,9 +79,7 @@
   // import { Swiper } from "swiper/bundle";
 
   // onUnmounted(() => {
-  //   // console.log(mySwiper.value)
   //   mySwiper.value.destroy()
-  //   // console.log(mySwiper.value)
   // })
 
 
