@@ -5,7 +5,7 @@
       <div class="menu__links">
         <ul class="menu__items" v-if="menuItems">
           <li class="menu__item" v-for="menuItem in menuItems" :key="menuItem.id">
-            <NuxtLink @click="opened = false" :to="localePath('/' + menuItem.attributes.page_relation.data.attributes.Slug)" class="t-80 font_2 c-brown-900">{{ menuItem.attributes.title }}</NuxtLink>
+            <NuxtLink @click="opened = false" :to="localePath('/' + menuItem.Page.data.attributes.Slug)" class="t-80 font_2 c-brown-900">{{ menuItem.Label }}</NuxtLink>
           </li>
         </ul>
       </div>
@@ -40,15 +40,14 @@ find("general", {
 );
 
 const { data : menu, pending: menuPending, refresh: menuRefresh, error: menuError } = await useAsyncData("menus", () =>
-findOne("menus", 1, {
-    populate: ["*", "items.page_relation"],
+findOne("menus", 'MainMenu', {
+    populate: ["deep"],
   })
 );
 
-// console.log(general.value);
-console.log(menu.value);
+console.log(menu.value.data.attributes.MenuItem);
 
-const menuItems = menu.value.data.attributes.items.data
+const menuItems = menu.value.data.attributes.MenuItem
 
 </script>
 
