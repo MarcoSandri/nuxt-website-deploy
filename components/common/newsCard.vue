@@ -28,7 +28,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .news-card {
   // height: rvw(600);
   max-width: rvw(450);
