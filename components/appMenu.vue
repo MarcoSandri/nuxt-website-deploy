@@ -48,7 +48,7 @@ findOne("menus", 1, {
 // console.log(general.value);
 console.log(menu.value);
 
-const menuItems = menu.data.value.data.attributes.items.data
+const menuItems = menu.value.data.attributes.items.data
 
 </script>
 
