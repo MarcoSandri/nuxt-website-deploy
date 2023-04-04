@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     cookieName: 'strapi_jwt',
   },
   css: [
-    // '@/assets/scss/resetscss.scss',
+    '@/assets/scss/resetscss.scss',
     '@/assets/scss/main.scss'
   ],
   vite: {
