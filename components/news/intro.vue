@@ -10,7 +10,7 @@
         <div class="news-single__description t-24 font_1 c-brown-900 t-light" v-html="article.Content"></div>
       </div>
       <div class="news-single__thumbnail">
-        <nuxt-img format="webp" :src="article.Thumbnail.data.attributes.url" :alt="article.Title" />
+        <nuxt-img format="webp" :src="useStrapiMedia(article.Thumbnail.data.attributes.url)" :alt="article.Title" />
       </div>
       <div class="news-single__description news-single__description--portrait t-24 font_1 c-brown-900 t-light"  v-html="article.Content"> </div>
     </div>
@@ -31,7 +31,7 @@
           class="news-single__slider"
         >
           <swiper-slide class="news-single__slide" v-for="(image, index) in article.Images.data" :key="index" :virtual-index="index">
-            <nuxt-img format="webp" :src="image.attributes.url" alt="'. $image['alt'] .'" />
+            <nuxt-img format="webp" :src="useStrapiMedia(image.attributes.url)" alt="'. $image['alt'] .'" />
           </swiper-slide>
         </swiper>
 

@@ -7,7 +7,7 @@
               <div class="splitText-slide-in-top servizi-hero__description t-40 font_2 c-brown-900" v-html="component.HeroContent"></div>
           </div>
           <div class="servizi-hero__image">
-              <nuxt-img format="webp" :src="component.HeroImage.data.attributes.url" :alt="component.HeroIntro" />
+              <nuxt-img format="webp" :src="useStrapiMedia(component.HeroImage.data.attributes.url)" :alt="component.HeroIntro" />
           </div>
       </div>
   </section>

@@ -3,7 +3,7 @@
   <article class="news-card">
     <nuxt-link :to="localePath('/news/' + article.attributes.Slug)" class="news-card__inner">
       <div class="news-card__cover">
-        <nuxt-img format="webp" :src="article.attributes.Thumbnail.data.attributes.url" :alt="article.attributes.Title" />
+        <nuxt-img format="webp" :src="useStrapiMedia(article.attributes.Thumbnail.data.attributes.url)" :alt="article.attributes.Title" />
       </div>
       <div class="news-card__content">
         <h3 class="news-card__title t-40 t-regular font_2 c-brown-500">{{ article.attributes.Title }}</h3>

@@ -7,7 +7,7 @@
           <div class="gallery-images__gallery">
             <div v-for="(row,index) in component.Images" :key="index" class="gallery-images__images-row" :class="row.RowType? row.RowType : 'gallery-images__images-row--three'">
               <div target="__blank" class="gallery-images__single-image"  v-for="(image,index) in row.Images.data" :key="index">
-                <nuxt-img format="webp" :src="image.attributes.url" :alt="image.attributes.alternativeText" />
+                <nuxt-img format="webp" :src="useStrapiMedia(image.attributes.url)" :alt="image.attributes.alternativeText" />
               </div>
             </div>
           </div>

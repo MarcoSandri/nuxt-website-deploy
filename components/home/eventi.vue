@@ -8,7 +8,7 @@
         <div ref="container" class="home-eventi__slider slide-in-top keen-slider">
           <article class="home-eventi__slide keen-slider__slide"  v-for="(slide, index) in component.Slider" :key="index" :class="{active: current === index }">
             <div class="home-eventi__slide-inner">
-              <nuxt-img format="webp" :src="slide.Image.data.attributes.url" :alt="slide.Label" />
+              <nuxt-img format="webp" :src="useStrapiMedia(slide.Image.data.attributes.url)" :alt="slide.Label" />
               <h3 class="home-eventi__slide-title font_2 t-60 c-brown-500 t-regular t-center">{{ slide.Label }}</h3>
             </div>
           </article>
